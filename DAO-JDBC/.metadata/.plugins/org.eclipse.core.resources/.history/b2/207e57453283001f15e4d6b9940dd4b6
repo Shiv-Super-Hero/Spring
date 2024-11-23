@@ -1,0 +1,5 @@
+package com.shivaji.dao;
+
+public interface StudentDao {
+
+}

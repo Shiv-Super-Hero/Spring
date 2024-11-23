@@ -1,0 +1,5 @@
+INDEX VERSION 1.134
+D:\Project\Spring\Maven\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2071792035.index
+\loginapp\src\main\resources
+D:\Project\Spring\Maven\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1140284072.index
+\newapp\src\main\java

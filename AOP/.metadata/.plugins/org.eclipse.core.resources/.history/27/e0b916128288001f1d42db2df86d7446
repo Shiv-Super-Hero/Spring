@@ -1,0 +1,14 @@
+package com.shivaji.service;
+
+import com.shivaji.beans.Account;
+import com.shivaji.beans.Cheque;
+
+public class TransactionServiceImpl implements TransactionService {
+
+	@Override
+	public void debit(Account acc, Cheque cheque) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

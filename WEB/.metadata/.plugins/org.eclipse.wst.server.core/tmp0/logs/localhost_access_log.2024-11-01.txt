@@ -1,0 +1,13 @@
+127.0.0.1 - - [01/Nov/2024:14:36:38 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [01/Nov/2024:14:36:40 +0530] "GET /securityapp2/test HTTP/1.1" 404 772
+0:0:0:0:0:0:0:1 - - [01/Nov/2024:14:36:41 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+127.0.0.1 - - [01/Nov/2024:14:37:41 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [01/Nov/2024:14:37:47 +0530] "GET /securityapp2/test HTTP/1.1" 200 441
+0:0:0:0:0:0:0:1 - - [01/Nov/2024:14:37:56 +0530] "GET /securityapp2/j_security_check?j_username=durga&j_password=durgaa HTTP/1.1" 200 245
+0:0:0:0:0:0:0:1 - - [01/Nov/2024:14:37:58 +0530] "GET /securityapp2/j_security_check?j_username=durga&j_password=durgaa HTTP/1.1" 200 245
+0:0:0:0:0:0:0:1 - - [01/Nov/2024:14:38:01 +0530] "GET /securityapp2/j_security_check?j_username=durga&j_password=durgaa HTTP/1.1" 200 245
+0:0:0:0:0:0:0:1 - durga [01/Nov/2024:14:38:07 +0530] "GET /securityapp2/j_security_check?j_username=durga&j_password=durga HTTP/1.1" 303 -
+0:0:0:0:0:0:0:1 - durga [01/Nov/2024:14:38:07 +0530] "GET /securityapp2/test HTTP/1.1" 200 23
+127.0.0.1 - - [01/Nov/2024:16:04:36 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [01/Nov/2024:16:04:40 +0530] "GET /app37/ HTTP/1.1" 500 25014
+0:0:0:0:0:0:0:1 - - [01/Nov/2024:16:04:41 +0530] "GET /favicon.ico HTTP/1.1" 404 762

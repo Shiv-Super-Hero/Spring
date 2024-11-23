@@ -1,0 +1,42 @@
+/*
+create or replace function getEmployees(sal_Range IN float)return SYS_REFCURSOR
+as
+employees SYS_REFCURSOR;
+BEGIN
+	open employees for select * from emp1 where ESAL < sal_Range;
+	return employees;
+END getEmployees;
+/
+ */
+package com.shivaji.jdbc;
+
+import java.sql.CallableStatement;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+
+import oracle.jdbc.OracleTypes;
+
+public class Function_With_CURSOREx {
+
+	public static void main(String[] args) throws Exception{
+		Class.forName("oracle.jdbc.OracleDriver");
+		Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","durga");
+		CallableStatement cst = conn.prepareCall("{? = call getEmployees(?)}");
+		cst.setFloat(2, 3600);
+		cst.registerOutParameter(1, OracleTypes.CURSOR);
+		cst.execute();
+		ResultSet rs = (ResultSet)cst.getObject(1);
+		System.out.println("ENO\tENAME\tESAL\tEADDR");
+		System.out.println("--------------------------");
+		while (rs.next()) {
+			System.out.println("Employee Number    : " + rs.getInt("ENO"));
+			System.out.println("Employee Name      : " + rs.getString("ENAME"));
+			System.out.println("Employee Salary    : " + rs.getFloat("ESAL"));
+			System.out.println("Employee Address   : " + rs.getString("EADDR"));
+		}
+		rs.close();
+		cst.close();
+		conn.close();
+	}
+}

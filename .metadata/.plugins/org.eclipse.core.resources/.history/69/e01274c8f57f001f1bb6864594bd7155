@@ -1,0 +1,7 @@
+package com.shivaji.beans;
+
+public class Account {
+	public void createAccount() {
+		System.out.println("*******Account Created*******");
+	}
+}

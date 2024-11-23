@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+    <typeInfo handle="=app01/src\/main\/java&lt;com.shivaji.service{StudentService.java[StudentService" modifiers="513" timestamp="1728041628731"/>
+    <typeInfo handle="=app01/src\/main\/java&lt;com.shivaji.dao{StudentDao.java[StudentDao" modifiers="513" timestamp="1728041985797"/>
+    <typeInfo handle="=app02/src&lt;com.shivaji.dao{EmployeeDao.java[EmployeeDao" modifiers="513" timestamp="1728101351300"/>
+    <typeInfo handle="=app02/D:\/Softwares\/Spring\/spring-jdbc-4.3.9.RELEASE.jar&lt;org.springframework.jdbc.core(RowMapper.class[RowMapper" modifiers="1537" timestamp="1728099384243"/>
+    <typeInfo handle="=app04/src&lt;com.shivaji.dao{StudentDao.java[StudentDao" modifiers="513" timestamp="1728144046200"/>
+    <typeInfo handle="=app06/src&lt;com.shivaji.dao{EmployeeDao.java[EmployeeDao" modifiers="513" timestamp="1728304644997"/>
+    <typeInfo handle="=app09/src&lt;com.shivaji.dao{EmployeeDao.java[EmployeeDao" modifiers="513" timestamp="1728383859462"/>
+    <typeInfo handle="=app11/src&lt;com.shivaji.dao{EmployeeDao.java[EmployeeDao" modifiers="513" timestamp="1728465199131"/>
+    <typeInfo handle="=app13/src&lt;com.shivaji.dao{EmployeeDao.java[EmployeeDao" modifiers="513" timestamp="1728479772233"/>
+</typeInfoHistroy>

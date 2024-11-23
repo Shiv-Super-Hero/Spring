@@ -1,0 +1,6 @@
+package com.shivaji.service;
+
+public interface EmployeeService {
+	public void getEmployeeDetails();
+	public void displayEmployeeDetails();
+}

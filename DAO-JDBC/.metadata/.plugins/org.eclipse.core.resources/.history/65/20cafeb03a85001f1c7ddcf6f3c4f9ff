@@ -1,0 +1,22 @@
+package com.shivaji.jdbc;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.Statement;
+
+public class JdbcApp {
+
+	public static void main(String[] args) throws Exception{
+		Class.forName("oracle.jdbc.OracleDriver");
+		Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","durga");
+		PreparedStatement pst = conn.prepareStatement("insert into emp1 values(?,?,?,?)");
+		
+		pst.setInt(1, 111);
+		pst.setString(2, "AAA");
+		pst.setFloat(3, 2000);
+		pst.setString(4, "Hyd");
+		conn.close();
+	}
+
+}

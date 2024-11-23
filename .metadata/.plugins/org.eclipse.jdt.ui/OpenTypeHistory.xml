@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+    <typeInfo handle="=app08/D:\/Softwares\/Spring\/spring-beans-4.3.9.RELEASE.jar&lt;org.springframework.beans.factory.config(Scope.class[Scope" modifiers="1537" timestamp="1726712249879"/>
+    <typeInfo handle="=app14/D:\/Softwares\/Spring\/spring-beans-4.3.9.RELEASE.jar&lt;org.springframework.beans.factory.config(BeanPostProcessor.class[BeanPostProcessor" modifiers="1537" timestamp="1726712249879"/>
+    <typeInfo handle="=app24/src&lt;com.shivaji.dao{StudentDao.java[StudentDao" modifiers="513" timestamp="1727249822886"/>
+    <typeInfo handle="=app24/src&lt;com.shivaji.service{StudentService.java[StudentService" modifiers="513" timestamp="1727260720081"/>
+    <typeInfo handle="=app24/src&lt;com.shivaji.controller{StudentController.java[StudentController" modifiers="513" timestamp="1727238994272"/>
+    <typeInfo handle="=app29/D:\/Softwares\/Spring\/spring-beans-4.3.9.RELEASE.jar&lt;org.springframework.beans.factory.support(MethodReplacer.class[MethodReplacer" modifiers="1537" timestamp="1726712249879"/>
+    <typeInfo handle="=app30/D:\/Softwares\/Spring\/spring-context-4.3.9.RELEASE.jar&lt;org.springframework.validation(Validator.class[Validator" modifiers="1537" timestamp="1726712276110"/>
+</typeInfoHistroy>

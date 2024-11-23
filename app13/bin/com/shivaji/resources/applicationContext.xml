@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!-- 
+	<bean id="empBean" class="com.shivaji.beans.Employee">
+		<property name="eid" value="E-111"/>
+		<property name="ename" value="Shivaji"/>
+		<property name="esal" value="25000"/>
+		<property name="eaddr" value="Pune"/>
+		<property name="acc">
+			<bean id="account" class="com.shivaji.beans.Account">
+				<property name="accNo" value="abc123"/>
+				<property name="accName" value="Shivaji"/>
+				<property name="accType" value="Savings"/>
+				<property name="balance" value="50000"/>
+			</bean>
+		</property>
+	</bean>
+	 -->
+	<bean id="empBean" class="com.shivaji.beans.Employee">
+		<property name="eid" value="E-111"/>
+		<property name="ename" value="Shivaji"/>
+		<property name="esal" value="25000"/>
+		<property name="eaddr" value="Pune"/>
+		<property name="acc" ref="account"/>
+	</bean>
+	<bean id="account" class="com.shivaji.beans.Account">
+		<property name="accNo" value="abc123"/>
+		<property name="accName" value="Shivaji"/>
+		<property name="accType" value="Savings"/>
+		<property name="balance" value="50000"/>
+	</bean>
+	
+	<!-- Both Above and below Configuration can work in the concept of Nested Beans -->
+	
+</beans>

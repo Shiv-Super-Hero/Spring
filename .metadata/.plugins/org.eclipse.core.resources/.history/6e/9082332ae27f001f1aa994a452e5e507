@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="userBean" class="com.shivaji.beans.User">
+		<property name="uname" value="C.Shivaji"/>
+		<property name="upwd" value="shivaji@21"/>
+		<property name="uage" value="19"/>
+		<property name="uemail" value="shivaji456@gmail.com"/>
+		<property name="umobile" value="977-9988776655"/>
+	</bean>
+	<bean id="userValidator" class="com.shivaji.validator.UserValidator">
+		<property name="resource" value="/com/shivaji/resources/Error_Messages.properties"/>
+	</bean>
+</beans>

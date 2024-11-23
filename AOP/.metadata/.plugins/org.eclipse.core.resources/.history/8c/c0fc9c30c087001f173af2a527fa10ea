@@ -1,0 +1,17 @@
+package com.shivaji.service;
+
+public class EmployeeServiceImpl implements EmployeeService {
+
+	@Override
+	public void getEmployeeDetails() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void displayEmployeeDetails() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,19 @@
+package com.shivaji.services;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+public class UserService {
+	public UserService() {
+		Connection conn;
+		Statement st;
+		ResultSet rs;
+		
+		try {
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

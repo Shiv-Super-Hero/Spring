@@ -1,0 +1,10 @@
+package com.shivaji.dto;
+
+import java.io.File;
+
+public class Employee {
+	private int eno;
+	private String ename;
+	private File emp_Image;
+	private File emp_Resume;
+}

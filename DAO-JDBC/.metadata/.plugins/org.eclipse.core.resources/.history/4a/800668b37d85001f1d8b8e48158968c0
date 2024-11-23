@@ -1,0 +1,10 @@
+package com.shivaji.jdbc;
+
+public class Function_With_CURSOREx {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

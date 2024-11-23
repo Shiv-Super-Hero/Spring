@@ -1,0 +1,9 @@
+package com.shivaji.aspect;
+
+import org.aspectj.lang.JoinPoint;
+
+public class LoggingAspectBean {
+	public void before(JoinPoint jp) {
+		System.out.println("Before "+jp.getSignature().getName()+" method Execution");
+	}
+}

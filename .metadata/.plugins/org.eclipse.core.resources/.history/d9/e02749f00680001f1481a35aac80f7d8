@@ -1,0 +1,14 @@
+package com.shivaji.core;
+
+import java.text.NumberFormat;
+import java.util.Locale;
+
+public class Test {
+
+	public static void main(String[] args) {
+		Locale l = new Locale("en","US");
+		NumberFormat numberFormat = NumberFormat.getInstance(l);
+		System.out.println(numberFormat.format(793776323691.65237));
+	}
+
+}

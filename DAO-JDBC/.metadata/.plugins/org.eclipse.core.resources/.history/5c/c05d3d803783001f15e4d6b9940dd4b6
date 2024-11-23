@@ -1,0 +1,55 @@
+package com.shivaji.dao;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+
+import com.shivaji.dto.Student;
+
+public class StudentDaoImpl implements StudentDao {
+
+	private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
+	public void setNamedParameterJdbcTemplate(NamedParameterJdbcTemplate namedParameterJdbcTemplate) {
+		this.namedParameterJdbcTemplate = namedParameterJdbcTemplate;
+	}
+	
+	@Override
+	public String add(Student std) {
+		String status = "";
+		String query = "";
+		try {
+			query = "select * from student where SID = :sid";
+			Map<String, Object> map = new HashMap<String,Object>();
+			map.put("sid", "S-111");
+			List<Student> studentList = namedParameterJdbcTemplate.query(query, map,(rs,index) -> {
+				Student std1 = new Student();
+				std1.setSid(rs.getString("SID"));
+				return std1;
+			});
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return status;
+	}
+
+	@Override
+	public Student search(String sid) {
+		
+		return null;
+	}
+
+	@Override
+	public String update(Student std) {
+		
+		return null;
+	}
+
+	@Override
+	public String delete(String sid) {
+		
+		return null;
+	}
+
+}

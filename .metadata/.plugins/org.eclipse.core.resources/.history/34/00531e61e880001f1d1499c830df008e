@@ -1,0 +1,33 @@
+package com.shivaji.beans;
+
+public class DBBean {
+	private String driverClass;
+	private String driver_Url;
+	private String dbUserName;
+	private String dbPassword;
+	
+	public String getDriverClass() {
+		return driverClass;
+	}
+	public void setDriverClass(String driverClass) {
+		this.driverClass = driverClass;
+	}
+	public String getDriver_Url() {
+		return driver_Url;
+	}
+	public void setDriver_Url(String driver_Url) {
+		this.driver_Url = driver_Url;
+	}
+	public String getDbUserName() {
+		return dbUserName;
+	}
+	public void setDbUserName(String dbUserName) {
+		this.dbUserName = dbUserName;
+	}
+	public String getDbPassword() {
+		return dbPassword;
+	}
+	public void setDbPassword(String dbPassword) {
+		this.dbPassword = dbPassword;
+	}
+}

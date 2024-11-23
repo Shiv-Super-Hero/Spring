@@ -1,0 +1,14 @@
+package com.shivaji.service;
+
+import com.shivaji.beans.Account;
+import com.shivaji.exception.InSufficientFundsException;
+
+public class TransactionServiceImpl implements TransactionService {
+
+	@Override
+	public String withdraw(Account acc, int wd_Amt) throws InSufficientFundsException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

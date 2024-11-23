@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.shivaji.beans.WelcomeBean&apos; to &apos;HaiBean&apos;&#x0D;&#x0A;- Original project: &apos;app11&apos;&#x0D;&#x0A;- Original element: &apos;com.shivaji.beans.WelcomeBean&apos;&#x0D;&#x0A;- Renamed element: &apos;com.shivaji.beans.HaiBean&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;WelcomeBean&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.shivaji.beans{WelcomeBean.java[WelcomeBean" matchStrategy="1" name="HaiBean" qualified="false" references="true" similarDeclarations="false" stamp="1726999630321" textual="false" version="1.0"/>
+</session>

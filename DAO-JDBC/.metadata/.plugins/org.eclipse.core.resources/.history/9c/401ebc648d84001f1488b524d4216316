@@ -1,0 +1,26 @@
+package com.shivaji.test;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.shivaji.dao.StudentDao;
+import com.shivaji.dto.Student;
+
+public class Test {
+
+	public static void main(String[] args) {
+		ApplicationContext context = new ClassPathXmlApplicationContext("/com/shivaji/resources/applicationContext.xml");
+		StudentDao studentDao = (StudentDao)context.getBean("studentDao");
+		/*
+		Student std = new Student();
+		std.setSid("S-444");
+		std.setSname("DDD");
+		std.setSaddr("Leh");
+		String status = studentDao.add(std);
+		System.out.println(status);
+		*/
+		
+		Student std = studentDao.search("S-111");
+	}
+
+}

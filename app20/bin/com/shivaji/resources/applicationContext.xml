@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:p="http://www.springframework.org/schema/p"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="accBean" class="com.shivaji.beans.Account" p:accNo="abc123" p:accName="AAA" p:accType="Current" p:balance="13000">
+		<!-- 
+		<property name="accNo" value="abc123"/>
+		<property name="accName" value="AAA"/>
+		<property name="accType" value="Savings"/>
+		<property name="balance" value="12000"/>
+		 -->
+	</bean>
+	
+	<bean id="empBean" class="com.shivaji.beans.Employee" p:eid="111" p:ename="AAA" p:esal="15000" p:eaddr="Hyd" p:acc-ref="accBean">
+		<!-- 
+		<property name="eid" value="111"/>
+		<property name="ename" value="AAA"/>
+		<property name="esal" value="14000"/>
+		<property name="eaddr" value="Goa"/>
+		<property name="acc" ref="accBean"/>
+		 -->
+	</bean>
+	
+</beans>
+
+
+<!-- This P-NameSpace is given through this xmlns as in this comment [xmlns:p="http://www.springframework.org/schema/p"] -->

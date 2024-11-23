@@ -1,0 +1,33 @@
+package com.shivaji.services;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+public class UserService {
+	Connection conn;
+	Statement st;
+	ResultSet rs;
+	
+	public UserService() {
+		try {
+			Class.forName("oracle.jdbc.OracleDriver");
+			conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","durga");
+			st = conn.createStatement();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	public String checkLogin(String uname,String upwd) {
+		String status = "";
+		try {
+			rs = st.executeQ
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+		return status;
+	}
+}

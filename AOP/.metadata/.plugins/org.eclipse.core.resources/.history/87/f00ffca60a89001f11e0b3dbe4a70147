@@ -1,0 +1,5 @@
+package com.shivaji.exception;
+
+public class InSufficientFundsException {
+
+}

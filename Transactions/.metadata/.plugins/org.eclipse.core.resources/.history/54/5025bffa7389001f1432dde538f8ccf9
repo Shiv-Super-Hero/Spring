@@ -1,0 +1,53 @@
+package com.shivaji.dao;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
+import org.springframework.transaction.TransactionDefinition;
+import org.springframework.transaction.TransactionStatus;
+import org.springframework.transaction.support.DefaultTransactionDefinition;
+
+public class TransactionDaoImpl implements TransactionDao {
+
+	private JdbcTemplate jdbcTemplate;
+	private DataSourceTransactionManager transactionManager;
+
+	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
+		this.jdbcTemplate = jdbcTemplate;
+	}
+
+	public void setTransactionManager(DataSourceTransactionManager transactionManager) {
+		this.transactionManager = transactionManager;
+	}
+
+	@Override
+	public String transferFunds(String fromAccount, String toAccount, int transferAmount) {
+		String status = "";
+		TransactionDefinition txDef = new DefaultTransactionDefinition();
+		TransactionStatus txStatus = transactionManager.getTransaction(txDef);
+		try {
+			debit(fromAccount,transferAmount);
+			credit(toAccount, transferAmount);
+			transactionManager.commit(txStatus);
+			status="Transaction Success";
+		} catch (Exception e) {
+			transactionManager.rollback(txStatus);
+			status = "Transaction Failure";
+			e.printStackTrace();
+		}
+		
+		return status;
+	}
+	
+	public void debit(String fromAccount, int transferAmount) {
+		jdbcTemplate.execute("update account set BALANCE = BALANCE -"+transferAmount+" where ACCNO = '"+fromAccount+"'");
+		System.out.println(transferAmount+" is debited from "+fromAccount);
+	}
+	
+	public void credit(String toAccount, int transferAmount) {
+		jdbcTemplate.execute("update account set BALANCE = BALANCE +"+transferAmount+" where ACCNO = '"+toAccount+"'");
+		System.out.println(transferAmount+" is credited to "+toAccount);
+	}
+	
+	
+
+}

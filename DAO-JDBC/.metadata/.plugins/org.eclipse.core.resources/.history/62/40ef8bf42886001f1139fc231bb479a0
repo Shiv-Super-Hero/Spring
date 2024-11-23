@@ -1,0 +1,31 @@
+package com.shivaji.jdbc;
+
+import java.io.FileInputStream;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+
+public class BlobInsertEx {
+
+	public static void main(String[] args) {
+		Connection conn = null;
+		PreparedStatement st = null;
+		FileInputStream fis = null;
+		
+		try {
+			Class.forName("oracle.jdbc.OracleDriver");
+			conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","durga");
+			
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			
+		}
+		
+		
+		
+	}
+
+}

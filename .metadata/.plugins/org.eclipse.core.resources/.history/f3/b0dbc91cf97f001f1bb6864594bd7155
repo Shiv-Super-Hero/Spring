@@ -1,0 +1,7 @@
+package com.shivaji.publisher;
+
+import ApplicationEventPublisherAware;
+
+public class AccountPublisher extends ApplicationEventPublisherAware {
+
+}

@@ -1,0 +1,22 @@
+/*
+create or replace function getEmployees(sal_Range IN float)return SYS_REFCURSOR
+as
+employees SYS_REFCURSOR;
+BEGIN
+	open employees for select * from emp1 where ESAL < sal_Range;
+	return employees;
+END getEmployees;
+/
+ */
+package com.shivaji.jdbc;
+
+public class Function_With_CURSOREx {
+
+	public static void main(String[] args) {
+		
+		
+		
+		
+	}
+
+}

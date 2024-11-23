@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="wishBean" abstract="true">
+		<property name="name" value="Vikram Rathod"/>
+		<property name="message" value="Have a Great Day Man"/>
+	</bean>
+	<bean id="helloBean" class="com.shivaji.beans.HelloBean" parent="wishBean">
+		<!-- 
+		<property name="name" value="Vikram Rathod"/>
+		 -->
+		<property name="message" value="Have a Good Days Ahead"/>
+		
+	</bean>
+	<bean id="welcomeBean" class="com.shivaji.beans.WelcomeBean" parent="wishBean">
+	<!-- 
+		<property name="name" value="Vikram Rathod"/>
+	 -->
+		<property name="message" value="Welcome To Khiladi World"/>
+	
+	</bean>
+</beans>

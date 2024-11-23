@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="addressBean" class="com.shivaji.beans.Address">
+		<property name="pno" value="23/3rt"/>
+		<property name="street" value="New Road"/>
+		<property name="city" value="Kathmandu"/>
+		<property name="state" value="Bagmati"/>
+		<property name="country" value="Nepal"/>
+	</bean>
+	<bean id="studentBean" class="com.shivaji.beans.Student">
+		<property name="sid" value="S-111"/>
+		<property name="sname" value="Sanjay Dutt"/>
+		<property name="saddr" ref="addressBean"/>
+		<property name="squal">
+			<list>
+				<value>B.Tech</value>
+				<value>M.Tech</value>
+				<value>PhD</value>
+			</list>
+		</property>
+		<property name="scourses">
+			<set>
+				<value>C</value>
+				<value>C++</value>
+				<value>Java</value>
+				<value>Python</value>				
+			</set>
+		</property>
+		<property name="scourses_And_Faculty">
+			<map>
+				<entry key="C" value="Kiran"/>
+				<entry key="C++" value="Kumar"/>
+				<entry key="Java" value="Shakti"/>
+				<entry key="Python" value="Govinda"/>
+			</map>
+		</property>
+		<property name="scourse_And_Cost">
+			<props>
+				<prop key="C">1000</prop>
+				<prop key="C++">1200</prop>
+				<prop key="Java">1400</prop>
+				<prop key="Python">1500</prop>
+			</props>
+		</property>
+	</bean>
+</beans>
+<!-- Here ref tag will take the reference bean Id attribute value. -->

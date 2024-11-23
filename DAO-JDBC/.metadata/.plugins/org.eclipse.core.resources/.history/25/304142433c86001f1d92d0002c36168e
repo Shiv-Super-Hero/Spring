@@ -1,0 +1,5 @@
+package com.shivaji.dto;
+
+public class Employee {
+
+}

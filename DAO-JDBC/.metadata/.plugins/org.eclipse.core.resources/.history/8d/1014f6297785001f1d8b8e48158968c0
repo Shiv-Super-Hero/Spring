@@ -1,0 +1,18 @@
+/*
+create or replace procedure getSal(no IN number, sal OUT float)
+AS
+BEGIN
+	select esal into sal where ENO = eno;
+END getSal;
+/
+*/
+package com.shivaji.jdbc;
+
+public class Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

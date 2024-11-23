@@ -1,0 +1,11 @@
+package com.shivaji.dao;
+
+public class TransactionDaoImpl implements TransactionDao {
+
+	@Override
+	public String transferFunds(String fromAccount, String toAccount, int transferAmount) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

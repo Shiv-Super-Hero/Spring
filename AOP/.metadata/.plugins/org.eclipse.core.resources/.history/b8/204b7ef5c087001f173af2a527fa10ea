@@ -1,0 +1,19 @@
+package com.shivaji.service;
+
+import com.shivaji.beans.Employee;
+
+public class EmployeeServiceImpl implements EmployeeService {
+
+	@Override
+	public void getEmployeeDetails(Employee emp) {
+		
+
+	}
+
+	@Override
+	public void displayEmployeeDetails(Employee emp) {
+		
+
+	}
+
+}

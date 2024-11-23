@@ -1,0 +1,19 @@
+package com.shivaji.service;
+
+import com.shivaji.beans.Student;
+
+public class InstituteServiceImpl implements InstituteService {
+
+	@Override
+	public void enquiry(Student std, String course_Name) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void registration(Student std, String course_Name) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

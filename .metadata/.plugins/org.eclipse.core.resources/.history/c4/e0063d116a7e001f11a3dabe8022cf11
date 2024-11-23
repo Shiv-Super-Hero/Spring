@@ -1,0 +1,5 @@
+package com.shivaji.beans;
+
+public interface Account {
+
+}

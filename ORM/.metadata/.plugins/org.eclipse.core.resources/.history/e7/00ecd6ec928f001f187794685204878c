@@ -1,0 +1,28 @@
+package com.shivaji.test;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+
+import com.shivaji.entity.Employee;
+
+public class Test {
+
+	public static void main(String[] args) throws Exception{
+		EntityManagerFactory factory = Persistence.createEntityManagerFactory("emp1");
+		EntityManager entityManager = factory.createEntityManager();
+		EntityTransaction entityTransaction = entityManager.getTransaction();
+		entityTransaction.begin();
+		Employee emp1 = new Employee();
+		emp.setEno(111);
+		emp.setEname("AAA");
+		emp.setEsal(2000);
+		emp.setEaddr("Hyd");
+		entityManager.persist(emp);
+		entityTransaction.commit();
+		System.out.println("Employee Inserted Successfully");
+		entityManager.close();
+	}
+
+}

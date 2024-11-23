@@ -1,0 +1,13 @@
+error.uname.required = User Name Is Required
+
+error.upwd.required = User Password Is Required
+error.upwd.minLength = User Password must be minimum 6 characters.
+error.upwd.maxLength = User Password must be maximum 10 characters.
+
+error.uage.required = User Age Is Required
+error.uage.range = User age must be in range from 18 to 25.
+
+error.uemail.required = User Email Is Required
+error.uemail.invalid = User Email Is Invalid.
+
+error.umobile.required = User Mobile No Is Required

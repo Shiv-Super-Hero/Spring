@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd" profile="development">
+	<bean id="dbBean" class="com.shivaji.beans.DBBean">
+		<property name="driverClass" value="oracle.jdbc.OracleDriver"/>
+		<property name="driverUrl" value="jdbc:oracle:thin:@localhost:1521:xe"/>
+		<property name="dbUserName" value="system"/>
+		<property name="dbPassword" value="durga"/>
+	</bean>
+</beans>

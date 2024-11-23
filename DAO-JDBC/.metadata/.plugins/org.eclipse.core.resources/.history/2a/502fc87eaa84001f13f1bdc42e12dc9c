@@ -1,0 +1,41 @@
+package com.shivaji.dao;
+
+import java.util.List;
+
+import org.springframework.jdbc.core.support.JdbcDaoSupport;
+
+import com.shivaji.dto.Employee;
+
+public class EmployeeDaoImpl extends JdbcDaoSupport implements EmployeeDao {
+
+	@Override
+	public String add(Employee emp) {
+		
+		return null;
+	}
+
+	@Override
+	public Employee search(int eno) {
+		
+		return null;
+	}
+
+	@Override
+	public List<Employee> getAllEmployees() {
+		
+		return null;
+	}
+
+	@Override
+	public String update(Employee emp) {
+		
+		return null;
+	}
+
+	@Override
+	public String delete(int eno) {
+		
+		return null;
+	}
+
+}

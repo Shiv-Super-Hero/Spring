@@ -1,0 +1,13 @@
+package com.shivaji.event;
+
+import org.springframework.context.ApplicationEvent;
+
+public class Account extends ApplicationEvent {
+
+	private String message;
+	public Account(Object obj,String message) {
+		super(obj);
+		this.message = message;
+	}
+
+}

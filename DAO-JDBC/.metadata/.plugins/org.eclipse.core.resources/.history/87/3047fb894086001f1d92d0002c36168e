@@ -1,0 +1,63 @@
+package com.shivaji.dao;
+
+import java.io.FileInputStream;
+import java.io.FileReader;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import org.springframework.dao.DataAccessException;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.support.AbstractLobCreatingPreparedStatementCallback;
+import org.springframework.jdbc.support.lob.LobCreator;
+import org.springframework.jdbc.support.lob.LobHandler;
+
+import com.shivaji.dto.Employee;
+
+public class EmployeeDaoImpl implements EmployeeDao {
+
+	private JdbcTemplate jdbcTemplate;
+	private LobHandler lobHandler;
+	
+	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
+		this.jdbcTemplate = jdbcTemplate;
+	}
+	
+	public LobHandler getLobHandler() {
+		return lobHandler;
+	}
+	
+	public void setLobHandler(LobHandler lobHandler) {
+		this.lobHandler = lobHandler;
+	}
+	
+	@Override
+	public void insertEmployee(Employee emp) {
+		String query = "insert into emp20 values(?,?,?,?)";
+		jdbcTemplate.execute(query,new AbstractLobCreatingPreparedStatementCallback(lobHandler) {
+			
+			@Override
+			protected void setValues(PreparedStatement pst, LobCreator lobCreator) throws SQLException, DataAccessException {
+				try {
+					pst.setInt(1, emp.getEno());
+					pst.setString(2, emp.getEname());
+					FileInputStream fis = new FileInputStream(emp.getEmp_Image());
+					FileReader fr = new FileReader(emp.getEmp_Resume());
+					lobCreator.setBlobAsBinaryStream(pst, 3, fis, (int)emp.getEmp_Image().length());
+					lobCreator.setClobAsCharacterStream(pst, 4, fr, (int)emp.getEmp_Resume().length());
+					
+					
+					
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	@Override
+	public Employee readEmployee() {
+		
+		return null;
+	}
+
+}

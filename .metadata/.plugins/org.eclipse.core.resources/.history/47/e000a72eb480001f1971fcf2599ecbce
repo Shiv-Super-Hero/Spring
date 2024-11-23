@@ -1,0 +1,7 @@
+package com.shivaji.editor;
+
+import java.beans.PropertyEditorSupport;
+
+public class EmployeeAddressEditor extends PropertyEditorSupport {
+
+}

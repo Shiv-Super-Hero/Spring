@@ -1,0 +1,5 @@
+package com.shivaji.beans;
+
+public class City_State {
+
+}

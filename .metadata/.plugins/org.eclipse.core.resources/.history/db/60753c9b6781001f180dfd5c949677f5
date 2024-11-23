@@ -1,0 +1,44 @@
+package com.shivaji.test;
+
+import org.springframework.expression.Expression;
+import org.springframework.expression.ExpressionParser;
+import org.springframework.expression.spel.standard.SpelExpressionParser;
+import org.springframework.expression.spel.support.StandardEvaluationContext;
+
+import com.shivaji.beans.CalculatorBean;
+
+public class Test {
+
+	public static void main(String[] args) {
+		ExpressionParser parser = new SpelExpressionParser();
+		
+		Expression expr1 = parser.parseExpression("10*21");
+		System.out.println(expr1.getValue());
+		
+		Expression expr2 = parser.parseExpression("true and true");
+		System.out.println(expr2.getValue());
+		
+		Expression expr3 = parser.parseExpression("true && false");
+		System.out.println(expr3.getValue());
+		
+		Expression expr4 = parser.parseExpression("10 == 10");
+		System.out.println(expr4.getValue());
+		
+		Expression expr5 = parser.parseExpression("10 ne 20");
+		System.out.println(expr5.getValue());
+		
+		Expression expr6 = parser.parseExpression("10 ne 20");
+		System.out.println(expr6.getValue());
+		
+		Expression expr7 = parser.parseExpression("10 eq 10 ? 'Condition is true':'Condition is False'");
+		System.out.println(expr7.getValue());
+		
+		Expression expr8 = parser.parseExpression("T(Thread).MIN_PRIORITY");
+		System.out.println(expr8.getValue());
+		
+		Expression expr9 = parser.parseExpression("T[java.util.Date].toString()");
+		System.out.println(expr9.getValue());
+		
+	}
+
+}

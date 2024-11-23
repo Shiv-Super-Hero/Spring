@@ -1,0 +1,5 @@
+error.uname.required = User Name Is Required
+error.upwd.required = User Password Is Required
+error.uage.required = User Age Is Required
+error.uemail.required = User Email Is Required
+error.umobile.required = User Mobile No Is Required

@@ -1,0 +1,48 @@
+package com.shivaji.test;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import com.shivaji.entity.Employee;
+
+public class Test {
+
+	public static void main(String[] args) {
+		SessionFactory sessionFactory = null;
+		Session session = null;
+		Transaction transaction = null;
+		
+		try {
+			Configuration cfg = new Configuration();
+			cfg.configure("/com/shivaji/resources/hibernate.cfg.xml");
+			sessionFactory = cfg.buildSessionFactory();
+			session = sessionFactory.openSession();
+			transaction = session.beginTransaction();
+			
+			Employee emp = new Employee();
+			emp.setEno(111);
+			emp.setEname("BBB");
+			emp.setEsal(3000);
+			emp.setEaddr("Palpa");
+			session.delete(emp);
+			transaction.commit();
+			System.out.println("Employee Inserted Successfully");
+			System.out.println("Transaction Success");
+		} catch (Exception e) {
+			transaction.rollback();
+			System.out.println("Transaction Failure");
+			e.printStackTrace();
+		}finally {
+			try {
+				session.close();
+				sessionFactory.close();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+
+	}
+
+}

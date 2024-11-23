@@ -1,0 +1,20 @@
+package com.shivaji.test;
+
+import com.shivaji.entity.Employee;
+
+public class Test {
+
+	public static void main(String[] args)throws Exception {
+		Class c = Class.forName("com.shivaji.entity.Employee");
+		System.out.println("Class Name  : "+c.getName());
+		System.out.println("Super Class : "+c.getSuperclass());
+		System.out.print("Interfaces  : ");
+		Class [] cls = c.getInterfaces();
+		for(Class c1:cls) {
+			System.out.println(c1.getName()+" ");
+		}
+		
+		
+	}
+
+}

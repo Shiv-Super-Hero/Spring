@@ -1,0 +1,29 @@
+package com.shivaji.service;
+
+import com.shivaji.dao.StudentDao;
+import com.shivaji.dto.Student;
+import com.shivaji.factory.StudentDaoFactory;
+
+public class StudentServiceImpl implements StudentService {
+
+	@Override
+	public String addStudent(Student std) {
+		StudentDao studentDao = StudentDaoFactory.getStudentDao();
+		String status = studentDao.add(std);
+		
+		return null;
+	}
+
+	@Override
+	public Student searchStudent(String sid) {
+		
+		return null;
+	}
+
+	@Override
+	public String deleteStudent(String sid) {
+		
+		return null;
+	}
+
+}

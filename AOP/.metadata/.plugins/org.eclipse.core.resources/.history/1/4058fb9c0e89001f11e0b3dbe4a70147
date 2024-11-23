@@ -1,0 +1,36 @@
+package com.shivaji.aspect;
+
+import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.AfterReturning;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.springframework.stereotype.Component;
+
+import com.shivaji.beans.Account;
+
+@Component("aspect")
+@Aspect
+public class TransactionAspect {
+	@Before("execution (* com.shivaji.service.TransactionService.*(..))")
+	public void before(JoinPoint jp) {
+		Object[] params = jp.getArgs();
+		Account acc = (Account) params[0];
+		System.out.println("Before Advice  : Initial Balance  :  "+acc.getBalance());
+	}
+	
+	@After("execution(* com.shivaji.service.TransactionService.*(..))")
+	public void after(JoinPoint jp) {
+		Object[] params = jp.getArgs();
+		Account acc = (Account) params[0];
+		System.out.println("After Advice  : Total Balance  :  "+acc.getBalance());
+	}
+	
+	@AfterReturning(pointcut = "execution(* com.shivaji.service.TransactionService.*(..))", returning="results")
+	public void afterReturning(JoinPoint jp, String results) {
+		System.out.println("Transaction Status : "+results);
+	}
+	
+	
+	
+}

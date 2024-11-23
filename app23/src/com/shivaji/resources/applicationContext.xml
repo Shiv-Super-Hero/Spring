@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:context="http://www.springframework.org/schema/context"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans 
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context 
+ http://www.springframework.org/schema/context/spring-context.xsd">
+ 	<context:annotation-config/>
+	<bean id="savingsAcc" class="com.shivaji.beans.Account">
+		<property name="accNo" value="abc123"/>
+		<property name="accName" value="C.Shivaji"/>
+		<property name="accType" value="Savings"/>
+		<property name="balance" value="25000"/>
+	</bean>
+	
+	<bean id="currentAcc" class="com.shivaji.beans.Account">
+		<property name="accNo" value="xyz123"/>
+		<property name="accName" value="RajniKant"/>
+		<property name="accType" value="Current"/>
+		<property name="balance" value="23000"/>
+	</bean>
+	
+	<bean id="employee" class="com.shivaji.beans.Employee">
+		<constructor-arg value="E111" index="0"/>
+		<constructor-arg value="C.Shivaji" index="1"/>
+		<constructor-arg value="19000" index="2"/>
+		<constructor-arg value="Hyd" index="3"/>
+		<!-- 
+		<property name="eid" value="E-111"/>
+		<property name="ename" value="C.Shivaji"/>
+		<property name="esal" value="10000"/>
+		<property name="eaddr" value="Madhurai"/>
+		<property name="acc" ref="account"/>
+		 -->
+	</bean>
+</beans>

@@ -1,0 +1,16 @@
+package com.shivaji.test;
+
+import com.shivaji.entity.Employee;
+
+public class Test {
+
+	public static void main(String[] args)throws Exception {
+		Class c1 = Class.forName("com.shivaji.entity.Employee");
+		System.out.println(c1.getName());
+		
+		Employee emp = new Employee();
+		Class c2 = emp.getClass();
+		System.out.println(c2.getName());
+	}
+
+}

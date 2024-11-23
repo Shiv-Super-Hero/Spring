@@ -1,0 +1,28 @@
+package com.shivaji.test;
+
+import java.lang.reflect.Method;
+
+import org.springframework.expression.Expression;
+import org.springframework.expression.ExpressionParser;
+import org.springframework.expression.spel.standard.SpelExpressionParser;
+import org.springframework.expression.spel.support.StandardEvaluationContext;
+
+public class Test {
+
+	public static void main(String[] args) throws Exception{
+		Class c = Class.forName("com.shivaji.beans.MyString");
+		Method method = c.getDeclaredMethod("reverseString",new Class[] {java.lang.String.class});
+		
+		StandardEvaluationContext context = new StandardEvaluationContext();
+		context.registerFunction("reverse", method);
+		context.setVariable("str", "Maratha Swaraj Caahiyae");
+		
+		ExpressionParser parser = new SpelExpressionParser();
+		Expression expr = parser.parseExpression("#reverse(#str)");
+		expr.getValue(context);
+		
+		expr = parser.parseExpression("new java.util.Date().toString()");
+		
+	}
+
+}

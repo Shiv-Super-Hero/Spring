@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd
+	" default-init-method="init" default-destroy-method="destroy">
+	
+	<!-- <context:annotation-config/> -->
+	<bean id="wishBean" class="com.shivaji.beans.WishBean" init-method="localInit" destroy-method="localDestroy">
+		<property name="name" value=" Thakur"/>
+		<property name="message" value="RamGadh me aapka Sawagat Hai"/>
+	</bean>
+	<!-- 
+	<bean id="helloBean" class="com.shivaji.beans.HelloBean">
+	
+		<property name="name" value=" Shivaji"/>
+		<property name="message" value=" Welocme To Taj Mahal"/>
+	
+	</bean>
+	<bean id="haiBean" class="com.shivaji.beans.HaiBean">
+		<property name="name" value="Tansen"/>
+		<property name="message" value="Koi Raag Cheed Do Tansen!"></property>
+	</bean>
+	 -->
+	</beans>

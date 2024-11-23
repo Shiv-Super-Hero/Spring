@@ -1,0 +1,22 @@
+package com.shivaji.beans;
+
+import java.util.ArrayList;
+
+public class City_State_Collection {
+	private ArrayList<City_State> list = new ArrayList<City_State>();
+	public ArrayList<City_State> getCityState(){
+		City_State c1 = new City_State();
+		c1.setCity("Pune");
+		c1.setState("Maharastra");
+		
+		City_State c2 = new City_State();
+		c2.setCity("Goa");
+		c2.setState("Goa");
+		
+		City_State c3 = new City_State();
+		c3.setCity("Dispur");
+		c3.setState("Assam");
+		return list;
+	}
+	
+}

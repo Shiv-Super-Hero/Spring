@@ -1,0 +1,32 @@
+package com.shivaji.service;
+
+import com.shivaji.beans.Employee;
+
+public class EmployeeServiceImpl implements EmployeeService {
+
+	@Override
+	public String createEmployee(Employee emp) throws Exception {
+		System.out.println("Employee "+emp.getEno()+" Inserted Successfully from createEmployee() method.");
+		return "Success";
+	}
+
+	@Override
+	public Employee searchEmployee(int eno) {
+		System.out.println("Employee "+eno+" Existed from searchEmployee() method.");
+		
+		return null;
+	}
+
+	@Override
+	public String updateEmployee(Employee emp) {
+		System.out.println("Employee "+emp.getEno()+" Updated Successfully from updateEmployee() method.");
+		return "Success";
+	}
+
+	@Override
+	public String deleteEmployee(Employee emp) {
+		
+		return null;
+	}
+
+}

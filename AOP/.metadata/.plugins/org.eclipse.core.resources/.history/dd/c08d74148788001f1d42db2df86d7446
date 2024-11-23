@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:aop="http://www.springframework.org/schema/aop"
+ xsi:schemaLocation="
+ http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/springbeans.xsd
+ http://www.springframework.org/schema/aop
+ http://www.springframework.org/schema/aop/springaop.xsd"> 
+ <bean id="accBean" class="com.shivaji.beans.Account">
+ 	<property name="accNo" value="abc123"/>
+ 	<property name="accName" value="Shivaji"/>
+ 	<property name="accType" value="Savings"/>
+ 	<property name="balance" value="24000"/>
+ </bean>
+ <bean id="chequeBean" class="com.shivaji.beans.Cheque">
+ 	<property name="cheque_No" value="xyz123"/>
+ 	<property name="amount" value="24000"/>
+ </bean>
+ 
+ <!-- Target -->
+ 
+ <bean id="target" class="com.shivaji.service.TransactionServiceImpl"/>
+ 
+ <!-- Advice -->
+ 
+ <bean id="advice" class="com.shivaji.advice.ChequeClearnaceAdvice"/>
+ 	
+ <!-- Proxy -->
+ <bean id="proxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+ 	<property name="target" ref="target"/>
+ 	<property name="interceptorNames">
+ 	<list>
+ 		<value>advice</value>
+ 	</list>
+ 	</property>
+ </bean>
+</beans>

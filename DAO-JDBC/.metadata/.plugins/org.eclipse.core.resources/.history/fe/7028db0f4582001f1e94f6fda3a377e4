@@ -1,0 +1,25 @@
+package com.shivaji.service;
+
+import com.shivaji.dto.Student;
+
+public class StudentServiceImpl implements StudentService {
+
+	@Override
+	public String addStudent(Student std) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Student searchStudent(String sid) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String deleteStudent(String sid) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

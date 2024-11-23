@@ -1,0 +1,5 @@
+package com.shivaji.publisher;
+
+public class AccountEventPublisher {
+
+}

@@ -1,0 +1,36 @@
+package com.shivaji.dao;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.support.lob.LobHandler;
+
+import com.shivaji.dto.Employee;
+
+public class EmployeeDaoImpl implements EmployeeDao {
+
+	private JdbcTemplate jdbcTemplate;
+	private LobHandler lobHandler;
+	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
+		this.jdbcTemplate = jdbcTemplate;
+	}
+	
+	public LobHandler getLobHandler() {
+		return lobHandler;
+	}
+	
+	public void setLobHandler(LobHandler lobHandler) {
+		this.lobHandler = lobHandler;
+	}
+	
+	@Override
+	public void insertEmployee(Employee emp) {
+		
+
+	}
+
+	@Override
+	public Employee readEmployee() {
+		
+		return null;
+	}
+
+}

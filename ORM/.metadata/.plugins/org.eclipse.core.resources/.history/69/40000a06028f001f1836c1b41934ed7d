@@ -1,0 +1,55 @@
+package com.shivaji.dao;
+
+import org.springframework.orm.hibernate4.HibernateTemplate;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.shivaji.beans.Employee;
+
+public class EmployeeDaoImpl implements EmployeeDao {
+
+	private HibernateTemplate hibernateTemplate;
+	public void setHibernateTemplate(HibernateTemplate hibernateTemplate) {
+		this.hibernateTemplate = hibernateTemplate;
+	}
+	
+	@Transactional
+	@Override
+	public String insert(Employee emp) {
+		String status = "";
+		try {
+			int eno = (Integer)hibernateTemplate.save(emp);
+			if(eno == emp.getEno()) {
+				status = "Employee Inserted Successfully";
+			}else {
+				status = "Employee Insertion Failure";
+			}
+			
+		} catch (Exception e) {
+			status = "Employee Insertion Failure";
+			e.printStackTrace();
+		}
+		return status;
+	}
+
+	@Transactional
+	@Override
+	public Employee search(int eno) {
+		
+		return null;
+	}
+
+	@Transactional
+	@Override
+	public String update(Employee emp) {
+		
+		return null;
+	}
+	
+	@Transactional
+	@Override
+	public String delete(Employee emp) {
+		
+		return null;
+	}
+
+}
